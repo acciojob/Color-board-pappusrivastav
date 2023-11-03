@@ -1,1 +1,14 @@
 /*  your css code here. If applicable */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    transition: background-color 1s;
+}
+

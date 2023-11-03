@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const container = document.querySelector('.container');
 
 // Function to generate 800 boxes
@@ -15,9 +14,10 @@ createBoxes();
 // Function to change color on hover and smoothly return to the original color
 container.addEventListener('mouseover', function (event) {
     if (event.target.classList.contains('square')) {
+        const originalColor = event.target.style.backgroundColor;
         event.target.style.backgroundColor = getRandomColor();
         setTimeout(() => {
-            event.target.style.backgroundColor = 'transparent';
+            event.target.style.backgroundColor = originalColor;
         }, 1000);
     }
 });
@@ -31,4 +31,3 @@ function getRandomColor() {
     }
     return color;
 }
-
